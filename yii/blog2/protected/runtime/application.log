@@ -1405,3 +1405,48 @@ Stack trace:
 #15 {main}
 REQUEST_URI=/blognew/yii/blog2/index.php?r=BookReviews/listar
 ---
+2014/12/04 06:40:20 [error] [exception.CException] exception 'CException' with message 'BookReviewsController cannot find the requested view "listar".' in /srv/http/blognew/yii/framework/web/CController.php:878
+Stack trace:
+#0 /srv/http/blognew/yii/framework/web/CController.php(782): CController->renderPartial('listar', Array, true)
+#1 /srv/http/blognew/yii/blog2/protected/controllers/BookReviewsController.php(184): CController->render('listar', Array)
+#2 /srv/http/blognew/yii/framework/web/actions/CInlineAction.php(49): BookReviewsController->actionListar()
+#3 /srv/http/blognew/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /srv/http/blognew/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /srv/http/blognew/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /srv/http/blognew/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /srv/http/blognew/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /srv/http/blognew/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /srv/http/blognew/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /srv/http/blognew/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /srv/http/blognew/yii/framework/web/CWebApplication.php(282): CController->run('listar')
+#12 /srv/http/blognew/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('BookReviews/lis...')
+#13 /srv/http/blognew/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /srv/http/blognew/yii/blog2/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/blognew/yii/blog2/index.php?r=BookReviews/listar
+---
+2014/12/04 06:41:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'books.tbl_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_user`.
+in /srv/http/blognew/yii/blog2/protected/controllers/TblUserController.php (136)
+in /srv/http/blognew/yii/blog2/index.php (13)
+2014/12/04 06:41:58 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tbl_user" for active record class "TblUser" cannot be found in the database.' in /srv/http/blognew/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /srv/http/blognew/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(TblUser))
+#1 /srv/http/blognew/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /srv/http/blognew/yii/blog2/protected/controllers/TblUserController.php(136): CActiveRecord->__construct('search')
+#3 /srv/http/blognew/yii/framework/web/actions/CInlineAction.php(49): TblUserController->actionAdmin()
+#4 /srv/http/blognew/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /srv/http/blognew/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /srv/http/blognew/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /srv/http/blognew/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /srv/http/blognew/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /srv/http/blognew/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /srv/http/blognew/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /srv/http/blognew/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /srv/http/blognew/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#13 /srv/http/blognew/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('tblUser/admin')
+#14 /srv/http/blognew/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /srv/http/blognew/yii/blog2/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blognew/yii/blog2/index.php?r=tblUser/admin&view=about
+HTTP_REFERER=http://localhost/blognew/yii/blog2/index.php?r=site/page&view=about
+---

@@ -12,7 +12,8 @@
 				echo '<p>'.$order2[j]->title.'</p>';
 		}
 	}*/
-?>	
+?>
+	<h2>Tabla Título de Libro - Review</h2>	
 	<table border="1"><tr>
 	<td><b>Título</b></td><td><b>Review</b></td>
 	</tr>
