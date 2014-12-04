@@ -37,4 +37,4 @@ Archivos de vistas
 
 Dato aparte en la pestaña 'Acerca de' podrá encontrar información del curso, nombre del alumno y código.
 
-Si hace click en la pestaña usuario, le saldrá un error pues esa pestaña esta relacionada con la base de datos blog.sql cuya tabla es tblUsers, y en la base de datos usada para este proyecto es books.sql, así que usar directamente los links dados para agregar y manejar los archivos para no tener ningun inconveniente.
+Si hace click en la pestaña usuario, le saldrá un error pues esa pestaña esta relacionada con la base de datos blog.sql cuya tabla es tblUsers, en la cual no existe conexion alguna hacia esa base de datos, y aquí la base de datos usada para este proyecto es books.sql, así que usar directamente los links dados para agregar y manejar los archivos para no tener ningún inconveniente.
