@@ -170,6 +170,7 @@ class BooksController extends Controller
 			Yii::app()->end();
 		}
 	}
+
 	public function actionCrear(){
 		$order = new Books;
 		$order->isbn='1256522';

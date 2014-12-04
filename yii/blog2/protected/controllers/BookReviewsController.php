@@ -36,7 +36,7 @@ class BookReviewsController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','crear'),
+				'actions'=>array('admin','delete','crear','listar'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -176,5 +176,12 @@ class BookReviewsController extends Controller
 		$order->review='Libro básico para aprender Java';
 		$order->save();
 	}
-
+	public function actionListar(){
+		$order = new BookReviews;
+		$order=BookReviews::model()->findAll();
+		$order2=new Books;
+		$order2=Books::model()->findAll();
+		$this->render('listar',array('order'=>$order,'order2'=>$order2));
+	
+	}
 }
